@@ -1,7 +1,8 @@
 import { expect, test, describe } from 'vitest';
 import { convertTemp, convertTime } from './ovenToAirfryerConverter';
 
-const VALID_TEMP = 200;
+const VALID_TEMP = 200; // in celsius
+const VALID_TEMP_F = 392; // in fahrenheit
 const VALID_OVEN_TYPE = 'conventional';
 const VALID_UNIT = 'c';
 
@@ -24,12 +25,17 @@ describe('convertTemp', () => {
         });
     })
 
-    // check that it converts celsius correctly
-    // 
+    test('it should calculate the correct temperature in celsius', () => {
+        expect(convertTemp(VALID_TEMP, VALID_OVEN_TYPE, VALID_UNIT)).toBe(180);
+    })
 
-    // check that it converts fahrenheit correctly
+    test('it should calculate the correct temperature in fahrenheit', () => {
+        expect(convertTemp(VALID_TEMP_F, VALID_OVEN_TYPE, 'f')).toBe(367);
+    })
 
-    // check that it converts both oven types correctly
+    test('it should calculate the correct temperature for fan assisted oven', () => {
+        expect(convertTemp(VALID_TEMP, 'fan', VALID_UNIT)).toBe(160);
+    })
 })
 
 describe('convertTime', () => {
