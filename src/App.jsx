@@ -2,19 +2,12 @@ import { useEffect, useState } from 'react'
 import OvenSettings from './components/OvenSettings/OvenSettings';
 import AirFryerSettings from './components/AirFryerSettings/AirFryerSettings';
 import styled from 'styled-components';
+import { convertTemp, convertTime } from './utils/ovenToAirfryerConverter';
 
 const MainTitle = styled.h1`
   font-family: "Jersey 10", system-ui;
   margin-top: 2rem;
 `
-
-const FAN_MULTIPLIER = 2;
-const CELSIUS_ADJUST = 20;
-const FAHRENHEIGHT_ADJUST = 25;
-
-const toAirFryerTemp = (temp, adjust, multiplier) => {
-  return temp -(adjust * multiplier);
-}
 
 function App() {
   const [airTemp, setAirTemp] = useState(0);
@@ -26,17 +19,8 @@ function App() {
   const [isCelsius, setIsCelsius] = useState(true);
 
   useEffect(() => {
-    setAirTemp(null);
-    setAirTime(null);
-
-    if (ovenTemp > 40) {
-      let adjust = isCelsius ? CELSIUS_ADJUST : FAHRENHEIGHT_ADJUST;
-      let multiplier = ovenWithFan ? FAN_MULTIPLIER : 1;
-      setAirTemp(toAirFryerTemp(ovenTemp, adjust, multiplier));
-    }
-    if (ovenTime > 0) {
-      setAirTime(Math.floor(ovenTime * 0.8));
-    }
+    setAirTemp(convertTemp(ovenTemp, ovenWithFan ? 'fan' : 'conventional', isCelsius ? 'c' : 'f'));
+    setAirTime(convertTime(ovenTime));
   }, [ovenTemp, ovenTime, ovenWithFan, setAirTemp, setAirTime, isCelsius]);
 
   return (
