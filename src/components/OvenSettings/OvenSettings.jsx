@@ -1,37 +1,7 @@
 import './OvenSettings.css'
-import styled from 'styled-components';
 import { Container } from '../StyledComponents/Container';
-
-const TextInput = styled.input`
-    background-color: #000000;
-    border-width: 0 0 3px 0;
-    border-color: #4af626;
-    border-style: solid;
-    padding: 5px;
-    margin: 2px;
-    width: 5rem;
-    background-color: rgba(0,0,0,0);
-    color: #4af626;
-    &:focus {
-        outline: none;
-    }
-`
-
-const Button = styled.button`
-    line-height: 1em;
-    border-color: #4af626;
-    border-width: 3px;
-    border-style: solid;
-    margin: 0 1rem;
-    font-family: inherit;
-    color: #4af626;
-    background-color: #000000;
-    padding: 5px;
-    &:active {
-        background-color: #4af626;
-        color: #000000;
-    }
-`
+import Button from '../StyledComponents/Button';
+import TextInput from '../StyledComponents/TextInput';
 
 function OvenSettings({temp = 0, setTemp, time = 0, setTime, isCelsius = true, setIsCelsius, isFan = false, setIsFan}) {
     const handleFan = () => {
