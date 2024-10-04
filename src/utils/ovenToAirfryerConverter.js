@@ -8,7 +8,7 @@ export const convertTime = (time) => {
 }
 
 export const convertTemp = (temp, ovenType, units) => {
-    if (temp <= 40) return null;
+    if (!temp || typeof temp !== 'number' || temp <= 40) return null;
     if (!['fan', 'conventional'].includes(ovenType)) return null;
     if (!['c', 'f'].includes(units)) return null;
 
