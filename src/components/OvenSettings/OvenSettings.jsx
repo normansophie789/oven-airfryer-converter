@@ -1,5 +1,4 @@
-import './OvenSettings.css'
-import { Container } from '../StyledComponents/Container';
+import Container from '../StyledComponents/Container';
 import Button from '../StyledComponents/Button';
 import TextInput from '../StyledComponents/TextInput';
 

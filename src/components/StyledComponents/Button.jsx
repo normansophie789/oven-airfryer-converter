@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default Button = styled.button`
+const Button = styled.button`
     line-height: 1em;
     border-color: #4af626;
     border-width: 3px;
@@ -14,4 +14,6 @@ export default Button = styled.button`
         background-color: #4af626;
         color: #000000;
     }
-`
+` 
+
+export default Button;
