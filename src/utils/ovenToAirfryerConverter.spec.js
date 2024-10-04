@@ -39,7 +39,13 @@ describe('convertTemp', () => {
 })
 
 describe('convertTime', () => {
-    // check that validation works as expected
+    describe.each([-1, 0, '', 'minute', {}, null])('Invalid times', (time) => {
+        test(`when the time is: ${time} it should return null`, () => {
+            expect(convertTime(time)).toBeNull();
+        });
+    })
 
-    // check that it converts duration in minutes correctly
+    test('it should calculate the time correctly', () => {
+        expect(convertTime(100)).toBe(80);
+    })
 })
