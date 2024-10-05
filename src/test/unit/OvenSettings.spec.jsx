@@ -1,6 +1,6 @@
 import { expect, test, describe, vi } from 'vitest';
 import { render, screen, beforeEach } from "@testing-library/react";
-import OvenSettings from '../components/OvenSettings';
+import OvenSettings from '../../components/OvenSettings';
 
 describe('OvenSettings', () => {
     beforeEach(() => {
