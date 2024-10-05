@@ -1,5 +1,5 @@
 import { expect, test, describe } from 'vitest';
-import { convertTemp, convertTime } from './ovenToAirfryerConverter';
+import { convertTemp, convertTime } from '../utils/ovenToAirfryerConverter';
 
 const VALID_TEMP = 200; // in celsius
 const VALID_TEMP_F = 392; // in fahrenheit

@@ -1,6 +1,6 @@
-import Container from '../StyledComponents/Container';
-import Button from '../StyledComponents/Button';
-import TextInput from '../StyledComponents/TextInput';
+import Container from './StyledComponents/Container';
+import Button from './StyledComponents/Button';
+import TextInput from './StyledComponents/TextInput';
 
 function OvenSettings({temp = 0, setTemp, time = 0, setTime, isCelsius = true, setIsCelsius, isFan = false, setIsFan}) {
     const handleFan = () => {

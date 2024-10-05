@@ -1,4 +1,4 @@
-import Container from "../StyledComponents/Container";
+import Container from "./StyledComponents/Container";
 
 function AirFryerSettings({temp, time, unit}) {
     let displayTemp = temp ? `${temp}${unit}` : '';

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import OvenSettings from './components/OvenSettings/OvenSettings';
-import AirFryerSettings from './components/AirFryerSettings/AirFryerSettings';
+import OvenSettings from './components/OvenSettings';
+import AirFryerSettings from './components/AirFryerSettings';
 import styled from 'styled-components';
 import { convertTemp, convertTime } from './utils/ovenToAirfryerConverter';
 
