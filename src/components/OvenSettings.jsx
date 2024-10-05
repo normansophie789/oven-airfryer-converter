@@ -1,6 +1,7 @@
 import Container from './StyledComponents/Container';
 import Button from './StyledComponents/Button';
 import TextInput from './StyledComponents/TextInput';
+import PropTypes from 'prop-types';
 
 function OvenSettings({temp = 0, setTemp, time = 0, setTime, isCelsius = true, setIsCelsius, isFan = false, setIsFan}) {
     const handleFan = () => {
@@ -30,6 +31,17 @@ function OvenSettings({temp = 0, setTemp, time = 0, setTime, isCelsius = true, s
             </div>
         </Container>
     );
+}
+
+OvenSettings.propTypes = {
+    temp: PropTypes.number,
+    time: PropTypes.number,
+    isFan: PropTypes.bool,
+    isCelsius: PropTypes.bool,
+    setTemp: PropTypes.func.isRequired,
+    setTime: PropTypes.func.isRequired,
+    setIsFan: PropTypes.func.isRequired,
+    setIsCelsius: PropTypes.func.isRequired
 }
 
 export default OvenSettings;
