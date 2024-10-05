@@ -2,7 +2,7 @@ name: Github pages deployment
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "attempt-2" ]
 
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
           persist-credentials: false
 
       - name: Install 🔧
-        run: npm install
+        run: npm ci
 
       - name: Build 🏗️
         run: |
