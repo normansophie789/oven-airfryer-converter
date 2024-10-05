@@ -1,0 +1,15 @@
+@import 'sass/style.scss';
+
+@font-face {
+    font-family: 'Jersey 10';
+    src: url('./assets/Jersey_10/Jersey10-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'VT323';
+    src: url('./assets/VT323/VT323-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}

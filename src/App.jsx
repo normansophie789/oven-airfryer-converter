@@ -3,6 +3,7 @@ import OvenSettings from './components/OvenSettings';
 import AirFryerSettings from './components/AirFryerSettings';
 import styled from 'styled-components';
 import { convertTemp, convertTime } from './utils/ovenToAirfryerConverter';
+import './App.css';
 
 const MainTitle = styled.h1`
   font-family: "Jersey 10", system-ui;
