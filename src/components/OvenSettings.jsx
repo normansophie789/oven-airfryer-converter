@@ -13,7 +13,7 @@ function OvenSettings({temp = 0, setTemp, time = 0, setTime, isCelsius = true, s
     }
 
     const handleNumbers = (e) => {
-        let numberRegex = /[0-9\/]+/
+        let numberRegex = /[0-9/]+/
         if (!numberRegex.test(e.key)) {
             e.preventDefault();
         }
