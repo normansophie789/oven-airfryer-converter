@@ -2,7 +2,7 @@ name: Github pages deployment
 
 on:
   push:
-    branches: [ "main", "attempt-2" ]
+    branches: [ "main", "attemp-2" ]
 
 
 jobs:
