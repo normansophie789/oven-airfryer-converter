@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     setAirTemp(convertTemp(ovenTemp, ovenWithFan ? 'fan' : 'conventional', isCelsius ? 'c' : 'f'));
     setAirTime(convertTime(ovenTime));
-  }, [ovenTemp, ovenTime, ovenWithFan, setAirTemp, setAirTime, isCelsius, convertTemp, convertTime]);
+  }, [ovenTemp, ovenTime, ovenWithFan, setAirTemp, setAirTime, isCelsius]);
 
   return (
     <div className="container-md">
