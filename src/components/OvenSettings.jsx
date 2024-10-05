@@ -11,7 +11,15 @@ function OvenSettings({temp = 0, setTemp, time = 0, setTime, isCelsius = true, s
     const handleCelsius = () => {
         setIsCelsius(cel => !cel)
     }
-    
+
+    const handleNumbers = (e) => {
+        let numberRegex = /[0-9/]+/
+        if (!numberRegex.test(e.key)) {
+            e.preventDefault();
+        }
+        return Number(e.target.value)
+    }
+
     return (
         <Container>
             <h2 data-testid="oven-settings-header" className="text-center">{isFan ? 'Fan assisted oven settings' : 'Conventional oven settings'}</h2>
@@ -25,8 +33,8 @@ function OvenSettings({temp = 0, setTemp, time = 0, setTime, isCelsius = true, s
                     </div>
                 </div>
                 <div className="row p-2">
-                    <label data-testid="temperature-input" className="fs-5">Temperature: <TextInput inputMode="numeric" className="fs-5" value={temp} onChange={e => setTemp(e.target.value)}/>{isCelsius ? '°C' : '°F'}</label>
-                    <label data-testid="unit-input" className="fs-5">Duration: <TextInput inputMode="numeric" className="fs-5" value={time} onChange={e => setTime(e.target.value)}/>minutes</label>
+                    <label data-testid="temperature-input" className="fs-5">Temperature: <TextInput type="number" inputMode="numeric" className="fs-5" value={temp} onChange={e => setTemp(handleNumbers(e))}/>{isCelsius ? '°C' : '°F'}</label>
+                    <label data-testid="unit-input" className="fs-5">Duration: <TextInput type="number" inputMode="numeric" className="fs-5" value={time} onChange={e => setTime(handleNumbers(e))}/>minutes</label>
                 </div>
             </div>
         </Container>

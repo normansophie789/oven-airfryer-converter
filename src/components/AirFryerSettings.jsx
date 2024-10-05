@@ -21,9 +21,9 @@ function AirFryerSettings({temp, time, unit}) {
 }
 
 AirFryerSettings.propTypes = {
-    temp: PropTypes.number.isRequired,
-    time: PropTypes.number.isRequired,
-    unit: PropTypes.string.isRequired
+    temp: PropTypes.number,
+    time: PropTypes.number,
+    unit: PropTypes.string
 }
 
 export default AirFryerSettings;
