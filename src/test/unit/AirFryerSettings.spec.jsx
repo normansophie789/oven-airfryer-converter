@@ -1,5 +1,5 @@
 import { expect, test, describe } from 'vitest';
-import { render, screen, beforeEach } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import AirFryerSettings from '../../components/AirFryerSettings';
 
 describe('AirFryerSettings', () => {
