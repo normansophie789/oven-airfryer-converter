@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Container from "./StyledComponents/Container";
 
 function AirFryerSettings({temp, time, unit}) {
@@ -17,6 +18,12 @@ function AirFryerSettings({temp, time, unit}) {
             </div>
         </Container>
     );
+}
+
+AirFryerSettings.propTypes = {
+    temp: PropTypes.number.isRequired,
+    time: PropTypes.number.isRequired,
+    unit: PropTypes.string.isRequired
 }
 
 export default AirFryerSettings;
