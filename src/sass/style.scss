@@ -1,0 +1,16 @@
+html, body {
+    color: #4af626;
+    font-family: "VT323", monospace;
+}
+
+html, body {
+    background: rgb(0,0,0);
+    background: linear-gradient(155deg, rgba(0,0,0,1) 0%, rgba(22,69,37,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+::selection {
+    background: #4af626;
+    color: #000000;
+}
