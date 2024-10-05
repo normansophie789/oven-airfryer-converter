@@ -3,6 +3,8 @@
 A small react project to convert oven cooking instructions into instructions suitable to use with an air fryer.
 I've added unit tests and a screenshot test so that it's easier to update and maintain this little project in the future.
 
+Link: https://normansophie789.github.io/oven-airfryer-converter/
+
 ## Statuses
 
 [![CodeQL](https://github.com/normansophie789/oven-airfryer-converter/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main)](https://github.com/normansophie789/oven-airfryer-converter/actions/workflows/github-code-scanning/codeql)
