@@ -13,11 +13,8 @@ function OvenSettings({temp = 0, setTemp, time = 0, setTime, isCelsius = true, s
     }
 
     const handleNumbers = (e) => {
-        let numberRegex = /[0-9/]+/
-        if (!numberRegex.test(e.key)) {
-            e.preventDefault();
-        }
-        return Number(e.target.value)
+        let strippedOfLetters = e.target.value.replace(/\D/g,'')
+        return Number(strippedOfLetters)
     }
 
     return (
@@ -33,8 +30,8 @@ function OvenSettings({temp = 0, setTemp, time = 0, setTime, isCelsius = true, s
                     </div>
                 </div>
                 <div className="row p-2">
-                    <label data-testid="temperature-input" className="fs-5">Temperature: <TextInput type="number" inputMode="numeric" className="fs-5" value={temp} onChange={e => setTemp(handleNumbers(e))}/>{isCelsius ? '°C' : '°F'}</label>
-                    <label data-testid="unit-input" className="fs-5">Duration: <TextInput type="number" inputMode="numeric" className="fs-5" value={time} onChange={e => setTime(handleNumbers(e))}/>minutes</label>
+                    <label data-testid="temperature-input" className="fs-5">Temperature: <TextInput className="fs-5" value={temp} onChange={e => setTemp(handleNumbers(e))}/>{isCelsius ? '°C' : '°F'}</label>
+                    <label data-testid="time-input" className="fs-5">Duration: <TextInput className="fs-5" value={time} onChange={e => setTime(handleNumbers(e))}/>minutes</label>
                 </div>
             </div>
         </Container>
