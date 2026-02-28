@@ -10,7 +10,7 @@ describe('OvenSettings', () => {
     test('it should render the Oven Settings component', () => {
         expect(screen.getByTestId('oven-settings-header')).toBeInTheDocument();
         expect(screen.getByTestId('temperature-input')).toBeInTheDocument();
-        expect(screen.getByTestId('unit-input')).toBeInTheDocument();
+        expect(screen.getByTestId('time-input')).toBeInTheDocument();
         expect(screen.getByTestId('fan-button')).toBeInTheDocument();
         expect(screen.getByTestId('units-button')).toBeInTheDocument();
 
