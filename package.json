@@ -12,7 +12,8 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "test:integration": "npx playwright test tests/e2e",
-    "test:integrationDebug": "npx playwright test --debug tests/e2e"
+    "test:integrationDebug": "npx playwright test --debug tests/e2e",
+    "test:report": "npx playwright show-report"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
