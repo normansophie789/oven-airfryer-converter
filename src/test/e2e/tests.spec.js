@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('End to end tests', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('');
+        await page.goto('/oven-airfryer-converter');
     });
 
     test('Page opens with empty values', async ({ page }) => {    
