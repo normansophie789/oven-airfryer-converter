@@ -11,8 +11,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test:unit": "vitest",
-    "test:integration": "cd src/test/e2e && npx playwright test",
-    "test:integrationDebug": "cd src/test/e2e && npx playwright test --debug /src/test/e2e",
+    "test:integration": "npx playwright test",
+    "test:integrationDebug": "npx playwright test --debug /src/test/e2e",
     "test:report": "npx playwright show-report"
   },
   "dependencies": {
