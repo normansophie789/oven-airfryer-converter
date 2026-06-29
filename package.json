@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test:unit": "vitest",
-    "test:integration": "npx playwright test",
+    "test:integration": "npx playwright test && npx playwright show-report",
     "test:integrationDebug": "npx playwright test --debug /src/test/e2e",
     "test:report": "npx playwright show-report"
   },
@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
-    "@playwright/test": "^1.58.2",
+    "@playwright/test": "^1.60.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",

@@ -28,6 +28,8 @@ Link: https://normansophie789.github.io/oven-airfryer-converter/
 - Locally deploying to Github Pages: `npm run deploy`
 - Build and watch: `npm run build:watch`
 - Preview build: `npm run preview`
+- Install Playwright dependencies: `npx playwright install`
+- Playwright integration tests and display report: `npm run test:integration`
 
 ## Github actions
 
