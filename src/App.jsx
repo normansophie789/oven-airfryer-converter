@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import OvenSettings from './components/OvenSettings';
 import AirFryerSettings from './components/AirFryerSettings';
 import styled from 'styled-components';
@@ -11,18 +11,13 @@ const MainTitle = styled.h1`
 `
 
 function App() {
-  const [airTemp, setAirTemp] = useState(0);
-  const [airTime, setAirTime] = useState(0);
-
   const [ovenTemp, setOvenTemp] = useState();
   const [ovenTime, setOvenTime] = useState();
   const [ovenWithFan, setOvenWithFan] = useState(false);
   const [isCelsius, setIsCelsius] = useState(true);
 
-  useEffect(() => {
-    setAirTemp(convertTemp(ovenTemp, ovenWithFan ? 'fan' : 'conventional', isCelsius ? 'c' : 'f'));
-    setAirTime(convertTime(ovenTime));
-  }, [ovenTemp, ovenTime, ovenWithFan, setAirTemp, setAirTime, isCelsius]);
+  const airTemp = convertTemp(ovenTemp, ovenWithFan ? 'fan' : 'conventional', isCelsius ? 'c' : 'f');
+  const airTime = convertTime(ovenTime);
 
   return (
     <div className="container-md">
